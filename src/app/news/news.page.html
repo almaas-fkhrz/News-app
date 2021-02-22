@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      <h6>SATURDAY, JANUARY 30</h6>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text class="ion-text-left">
+    <h1 class="title">Top News</h1>
+  </ion-text>
+  <ion-slides [options]="slidesOpt">
+    <ion-slide *ngFor="let a of data2?.articles" (click)="goToPage(a)">
+      <ion-grid>
+        <ion-row>
+          <ion-img class="img" [src]="a.urlToImage"></ion-img>
+        </ion-row>
+        <ion-row>
+          <ion-text class="ion-text-left">
+            <h5>{{a.title}}</h5>
+          </ion-text>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+  <ion-text class="ion-text-left">
+    <h4 class="title">Recent News</h4>
+  </ion-text>
+  <ion-item *ngFor="let a of data?.articles" (click)="goToPage(a)" lines="none">
+    <ion-grid>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="7">
+          <h6>{{a.title}}</h6>
+        </ion-col>
+        <ion-col size="5">
+          <ion-img class="img" [src]="a.urlToImage"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-content>

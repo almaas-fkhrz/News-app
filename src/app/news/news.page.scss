@@ -1,0 +1,26 @@
+ion-slides {
+    ion-grid {
+        padding: 15px;
+        .img {
+            border-radius: 10px !important;
+            overflow: hidden;
+        }
+    }
+}
+
+ion-item {
+    margin: 0;
+    padding: 0;
+    h6 {
+        padding-right: 10px;
+    }
+    .img {
+        border-radius: 5px !important;
+        overflow: hidden;
+    }
+}
+
+.title {
+    margin: 0 5px;
+    padding: 10px;
+}

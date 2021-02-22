@@ -1,0 +1,18 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img [src]="article.urlToImage"></ion-img>
+  <ion-card-content>
+    <ion-card-title class="ion-margin-bottom">{{article.title}}</ion-card-title>
+    <p>{{article.content}}</p>
+  </ion-card-content>
+  <ion-card-content>
+    <ion-button size="small" (click)="openWeb(article.url)">Open website</ion-button>
+  </ion-card-content>
+</ion-content>
